@@ -13,7 +13,6 @@ import java.util.Scanner;
 
 class Radio {
 
-    private Boolean Encendido = false;
     private Boolean TipoSenal = true;
     private float EmisoraActual = 87.9f;
     private int Boton1;

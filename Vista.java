@@ -14,6 +14,7 @@ import java.util.Scanner;
 class Vista {
 
   Scanner scan = new Scanner(System.in);
+  private int Encendido = 0;
 
   /******************************************************************
    * 
@@ -43,7 +44,7 @@ class Vista {
     System.out.println("1. Cambiar Emisora ++");
     System.out.println("2. Cambiar Emisora --");
     System.out.println("3. Guardar Emisora");
-    System.out.println("4. Cambiar a boton especifico");
+    System.out.println("4. Cambiar a boton especifico"); //QUITAR ESTA OPCION
 
     System.out.println("Que eliges?");
   }
