@@ -17,7 +17,7 @@ class Ctrl {
         Scanner scan = new Scanner(System.in);
         // Crear las clases Radio y Vista
         int opcion = 0;
-        Vista View = new Vista();
+        Vista UserView = new Vista();
         Radio Radio = new Radio();
 
         Radio.MostrarSenal(Radio);
@@ -37,15 +37,19 @@ class Ctrl {
 
                 while (opcionEncendido != 2){
 
-                    userView.ChooseStation();
+                    UserView.ChooseStation();
                     opcionEncendido = scan.nextInt();
 
                     if (opcionEncendido == 1){
                         System.out.println("Radio AM seleccionada");
 
-                        UserView.RadioGUI();
-                        
                         int opcionGUI = 0;
+
+                        UserView.RadioGUI();
+
+                        opcionGUI = scan.nextInt();
+                        
+                        
 
                         while (opcionGUI != 4){
 
@@ -53,12 +57,17 @@ class Ctrl {
                                 System.out.println("Subiendo emisora");
 
                                 //AGREGAR AQUI el metodo de radio para subir emisora
+
+                                Radio.SubirEmisora(Radio);
                             }
 
                             if (opcionGUI == 2){
                                 System.out.println("Bajar emisora");
 
                                 //AGREGAR AQUI el metodo de radio para bajar emisora
+
+                                Radio.BajarEmisora(Radio);
+
                             }
 
                             if (opcionGUI == 3){
@@ -74,6 +83,7 @@ class Ctrl {
                                         System.out.println("Guardando en boton 1...");
 
                                         //AGREGAR AQUI el metodo de radio para guardar emisora
+
                                     }
 
                                     if (opcionBotones == 2){
@@ -148,12 +158,17 @@ class Ctrl {
 
                     }
 
-                    if (opcionEncedido == 2){
+                    if (opcionEncendido == 2){
+
+                        int opcionGUI = 0;
+
+
                         System.out.println("Radio FM Seleccionada");
 
                         UserView.RadioGUI();
+                        opcionGUI = scan.nextInt();
                         
-                        int opcionGUI = 0;
+
 
                         while (opcionGUI != 4){
 
